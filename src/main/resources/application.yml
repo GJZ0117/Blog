@@ -1,0 +1,38 @@
+spring:
+  # mysql配置
+  datasource:
+    url: jdbc:mysql://ip:3306/blog_project?useSSL=false&useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: password
+  # redis配置
+  redis:
+    port: 6379
+    host: ip
+    password: password
+    timeout: 5000
+
+  # 上传图片
+  servlet:
+    multipart:
+      max-file-size: 8MB # 单个图片最大8MB
+      max-request-size: 32MB # 单次上传最大32MB
+
+# 后端端口
+server:
+  port: 8000
+
+# mybatis-plus配置
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: t_ # 数据表前缀
+  configuration:
+    log-impl: org.apache.ibatis.logging.log4j2.Log4j2Impl
+
+
+# 七牛云key
+qiniu:
+  accessKey: accessKey
+  accessSecretKey: accessSecretKey
+
