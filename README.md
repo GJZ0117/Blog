@@ -1,4 +1,8 @@
 # Blog-SpringBoot
+## 构建数据库表
+将 `blog_project.sql` 导入数据库进行表构建
+
+在命令行执行 `mysql -uroot -ppassword blog_project < blog_project.sql`
 ## 修改配置
 - 在 `src/main/java/com/gjz/utils/QiniuUtils.java` 中，将 `url` 更改为自己在七牛云绑定的域名
 - 在 `src/resources/applications.yml` 中
